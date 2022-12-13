@@ -115,7 +115,9 @@ class SupportServiceProvider extends PluginServiceProvider
     {
         return [
             Js::make('support', __DIR__ . '/../dist/index.js'),
-            Js::make('async-alpine', 'https://cdn.jsdelivr.net/npm/async-alpine@0.5.x/dist/async-alpine.script.js'),
+            Js::make('async-alpine', 'https://cdn.jsdelivr.net/npm/async-alpine@0.5.x/dist/async-alpine.script.js'), // TODO: load locally from support
+            // TODO: @alpinejs/collapse -> load from tables (remove from app)
+            Js::make('alpinejs', 'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js'), // TODO: load locally from support
         ];
     }
 
